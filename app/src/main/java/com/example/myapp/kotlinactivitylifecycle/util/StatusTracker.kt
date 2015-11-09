@@ -37,15 +37,14 @@ class StatusTracker private constructor() {
 
     fun getStatus(activityName: String) : String?{
         var status = mStatusMap.get(activityName)
-        /*
-        var length:Int? = status?.length()
-        status = status?.substring(2, length?)
+
+        status = status?.substring(2, status?.length() as Int)
         if(status?.endsWith("e") == true) {
-            status?.substring(0, status?.length()?.minus(1))
+            status?.substring(0, status?.length()?.minus(1) as Int)
         }
         if(status?.endsWith("p") == true) {
             status + "p"
-        }*/
+        }
         status += STATUS_SUFFIX
         return status
     }
